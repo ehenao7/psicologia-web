@@ -6,63 +6,115 @@
   <title>Bienestar Emocional</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --color-fondo: #fffdf7;
+      --color-acento: #96c8a2;
+      --color-secundario: #fcd6d6;
+      --color-texto: #444;
+      --color-rosa: #f7c6c6;
+    }
+
     body {
       font-family: 'Lato', sans-serif;
-      background-color: #fff8f0;
-      color: #333;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
       margin: 0;
       padding: 0;
     }
+
     header, section {
       padding: 2em;
       max-width: 900px;
       margin: auto;
     }
+
     h1, h2 {
-      color: #506f5c;
+      color: #2c5f4f;
       font-family: 'Playfair Display', serif;
     }
+
     ul {
       list-style: none;
       padding-left: 0;
     }
+
     ul li::before {
       content: "🌿 ";
       margin-right: 0.5em;
     }
+
     .highlight {
       color: #a7747a;
       font-weight: bold;
     }
-    .accent {
-      color: #7aa786;
+
+    .cta {
+      background-color: var(--color-acento);
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+      border-radius: 12px;
+      margin: 2em auto;
     }
+
+    .cta p {
+      margin: 0.8em 0;
+    }
+
+    .image-section {
+      text-align: center;
+      margin: 2em 0;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.02);
+    }
+
     footer {
+      background-color: #f0f0f0;
       text-align: center;
       font-size: 0.9em;
       padding: 1em;
-      background-color: #f5f5f5;
     }
-    .cta {
-      background-color: #7aa786;
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
       color: white;
-      padding: 1em;
-      text-align: center;
-      border-radius: 8px;
-      margin-top: 2em;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
     }
-    .cta p {
-      margin: 0.5em 0;
-    }
-    .image-section {
-      text-align: center;
-      margin-bottom: 2em;
-    }
-    .image-section img {
-      width: 30%;
-      height: auto;
-      border-radius: 12px;
-      margin: 1em 0;
+
+    @media (max-width: 600px) {
+      header, section {
+        padding: 1.2em;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      .image-section img {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -83,9 +135,9 @@
   </section>
 
   <section>
-  <div class="image-section">
-    <img src="https://i.postimg.cc/D43H8Zwg/pexels-wendywei-3600507.jpg" alt="Manos entrelazadas con conexión emocional">
-  </div>   
+    <div class="image-section">
+      <img src="https://i.postimg.cc/D43H8Zwg/pexels-wendywei-3600507.jpg" alt="Manos entrelazadas con conexión emocional">
+    </div>
     <h2>🌿 ¿Te has sentido...?</h2>
     <ul>
       <li>Desbordado por tus emociones</li>
@@ -97,9 +149,9 @@
   </section>
 
   <section>
-  <div class="image-section">
-    <img src="https://i.postimg.cc/7G2jH7wh/pexels-polina-zimmerman-3958379.jpg" alt="Conversación emocional en consulta">
-  </div>
+    <div class="image-section">
+      <img src="https://i.postimg.cc/7G2jH7wh/pexels-polina-zimmerman-3958379.jpg" alt="Conversación emocional en consulta">
+    </div>
     <h2>🧠 ¿Qué te ofrezco?</h2>
     <h3>Atención Psicológica Individual</h3>
     <ul>
@@ -123,16 +175,14 @@
   </section>
 
   <section>
-
+    <div class="image-section">
+      <img src="https://i.postimg.cc/v1jpwXRC/pexels-jordicosta-32377230.jpg" alt="Persona celebrando conexión con la naturaleza">
+    </div>
     <h2>💬 Un espacio de confianza</h2>
     <p>Mi enfoque está centrado en la persona y sus emociones, no solo en los síntomas. A través del diálogo, herramientas prácticas y ejercicios personalizados, te ayudo a reconectar contigo y con los que amas, recuperando tu equilibrio emocional.</p>
   </section>
 
   <section class="cta">
-  <div class="image-section">
-
-    <img src="https://i.postimg.cc/v1jpwXRC/pexels-jordicosta-32377230.jpg" alt="Persona celebrando conexión con la naturaleza">
-  </div>
     <h2>📍 Atención presencial y en línea</h2>
     <p>Agenda tu cita o recibe más información:</p>
     <p>📞 +57 (313) 684 3022</p>
@@ -140,6 +190,8 @@
     <p>🌐 [Redes sociales o sitio web si aplica]</p>
     <p><em>“No tienes que hacerlo solo. El primer paso es pedir ayuda.”</em></p>
   </section>
+
+  <a href="https://wa.me/573136843022" class="whatsapp-button" title="Escríbeme por WhatsApp" target="_blank">💬</a>
 
   <footer>
     © 2025 Claudia M. Osorno F. | Sitio web diseñado con empatía ✨
